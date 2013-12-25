@@ -1,0 +1,73 @@
+<%= form_for(@scraper) do |f| %>
+  <% if @scraper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scraper.errors.count, "error") %> prohibited this scraper from being saved:</h2>
+
+      <ul>
+      <% @scraper.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :industry %><br>
+    <%= f.text_field :industry %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.text_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label :skills %><br>
+    <%= f.text_area :skills %>
+  </div>
+  <div class="field">
+    <%= f.label :organizations %><br>
+    <%= f.text_area :organizations %>
+  </div>
+  <div class="field">
+    <%= f.label :education %><br>
+    <%= f.text_area :education %>
+  </div>
+  <div class="field">
+    <%= f.label :websites %><br>
+    <%= f.text_area :websites %>
+  </div>
+  <div class="field">
+    <%= f.label :groups %><br>
+    <%= f.text_area :groups %>
+  </div>
+  <div class="field">
+    <%= f.label :languages %><br>
+    <%= f.text_area :languages %>
+  </div>
+  <div class="field">
+    <%= f.label :certifications %><br>
+    <%= f.text_area :certifications %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

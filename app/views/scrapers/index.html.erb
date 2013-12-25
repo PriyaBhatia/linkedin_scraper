@@ -1,0 +1,52 @@
+<h1>Listing scrapers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Industry</th>
+      <th>Picture</th>
+      <th>Skills</th>
+      <th>Organizations</th>
+      <th>Education</th>
+      <th>Websites</th>
+      <th>Groups</th>
+      <th>Languages</th>
+      <th>Certifications</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scrapers.each do |scraper| %>
+      <tr>
+        <td><%= scraper.first_name %></td>
+        <td><%= scraper.last_name %></td>
+        <td><%= scraper.title %></td>
+        <td><%= scraper.name %></td>
+        <td><%= scraper.location %></td>
+        <td><%= scraper.industry %></td>
+        <td><%= scraper.picture %></td>
+        <td><%= scraper.skills %></td>
+        <td><%= scraper.organizations %></td>
+        <td><%= scraper.education %></td>
+        <td><%= scraper.websites %></td>
+        <td><%= scraper.groups %></td>
+        <td><%= scraper.languages %></td>
+        <td><%= scraper.certifications %></td>
+        <td><%= link_to 'Show', scraper %></td>
+        <td><%= link_to 'Destroy', scraper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scraper', get_link_path %>

@@ -1,0 +1,17 @@
+ <%= form_tag scrapers_path, :method => 'post' do %>
+ <header>
+<h4 class="title">Scarpe Profile</h4>
+</header>
+<section class="body">
+<div class="body-inner">
+ <div class="control-group" >
+  <%= label_tag "Provide Linkedin Profile Link",nil,:class => "control-label" %>
+  <div class="controls">
+  <%= text_field_tag "scraper[profile_link]","", :class => "m-wrap large", :placeholder => "Profile Link" %>
+  </div>
+  </div>
+   <div class="form-actions">
+  <%= submit_tag "Scrape Profile",:id=>"submitButton" %>
+  <% end %>
+  </div>
+</div>

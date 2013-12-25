@@ -1,0 +1,125 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @scraper.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @scraper.last_name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @scraper.title %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scraper.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @scraper.location %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @scraper.industry %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <img src ="<%= @scraper.picture %>"></img>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @scraper.skills %>
+</p>
+
+<p>
+  <strong>Organizations:</strong>
+  <%#= @scraper.organizations %>
+  <table>
+    <th>  Name  </th>
+    <th> Start Date</th>
+    <th> End  date  </th>
+
+    <% @scraper.organizations.each do |c|%>
+      <tr>
+        <td><%=c[:name]%></td>&nbsp
+        <td>&nbsp<%=c[:start_date]%></td>
+        <td><%=c[:end_date]%></td>
+      </tr>
+    <% end  %>
+  </table>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%#= @scraper.education %>
+  <table>
+    <th>  Name  </th>
+    <th>Description</th>
+    <th>period   </th>
+
+    <% @scraper.education.each do |c|%>
+
+      <tr>
+      <td><%=c[:name]%></td>&nbsp
+      <td><%=c[:description]%></td>
+      <td><%=c[:period]%></td>
+      </tr>
+    <% end  %>
+  </table>
+</p>
+
+<p>
+  <strong>Websites:</strong>
+  <%= @scraper.websites %>
+</p>
+
+<p>
+  <strong>Groups:</strong>
+  <%#= @scraper.groups %>
+  <table>
+    <th>  Name  </th>
+    <th>Link</th>
+
+    <td><% @scraper.groups.each do |c|%>
+    <tr>
+    <td><%=c[:name]%></td>&nbsp
+    <td><%=c[:link]%></td>
+    </tr>
+    <% end  %>
+  </table>
+</p>
+
+<p>
+  <strong>Languages:</strong>
+  <%#= @scraper.languages %>
+  <table>
+    <th>  Name  </th>
+    <th></th>
+    <th>Link</th>
+    <td><% @scraper.languages.each do |c|%>
+    <tr>
+    <td><%=c[:name]%></td>&nbsp
+    <td><%=c[:link]%></td>
+    </tr>
+    <% end  %>
+  </table>
+</p>
+
+<p>
+  <strong>Certifications:</strong>
+  <%= @scraper.certifications %>
+</p>
+
+
+
+<%#= link_to 'Edit', edit_scraper_path(@scraper) %> |
+<%= link_to 'Back', scrapers_path %>

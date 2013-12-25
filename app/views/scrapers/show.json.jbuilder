@@ -1,0 +1,1 @@
+json.extract! @scraper, :id, :first_name, :last_name, :title, :name, :location, :industry, :picture, :skills, :organizations, :education, :websites, :groups, :languages, :certifications, :created_at, :updated_at
